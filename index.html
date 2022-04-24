@@ -1,0 +1,147 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <script>
+        // 1.
+        console.log('----------------Hello user----------------');
+
+        function greeter(name) {
+            return `Hello ${name}`;
+        }
+
+        console.log(greeter('Sudarshan Gurung'));
+
+        // 2.
+        console.log('----------------What type?----------------');
+
+        function checkType(value) {
+            return typeof value;
+        }
+
+        console.log(checkType([2, 3, 4]));
+
+        /*
+        JavaScript currently has 8, and only 8 value types:
+        
+        "undefined", "boolean", "string", "number", "bigint", "symbol", "function", and "object".
+        
+        Of these, "object" is the type associated with any expression which doesn’t have a type matching any of the other 7 types. For this reason, the typeof operator returns "object" for arrays. 
+        
+        If you want to check if an object is actually an array, use the Array.isArray function.
+        
+        REF: 
+        https://www.quora.com/Why-is-a-type-typeof-array-in-JavaScript-object-not-an-array-JavaScript-arrays-object-typeof-development
+        */
+
+        // 3.
+        console.log('----------------Check Length----------------');
+
+        function checkLength(string) {
+            let length = 0;
+
+            for (let i = 0; i < string.length; i++) {
+                if (i < string.length) {
+                    length += 1;
+                }
+            }
+            return length;
+        }
+
+        const theLength = checkLength('Around the World');
+        console.log(theLength);
+        console.log(checkLength('One More Time'));
+
+        // 4.
+        console.log('----------------Sum of two numbers----------------');
+
+        function addTwoNumbers(a, b) {
+            return a + b;
+        }
+
+        console.log(addTwoNumbers(4, 6));
+
+        // 5.
+        console.log('----------------Add and multiply----------------');
+
+        function addAndMultiply(a, b, c, d) {
+            return (a + b) * (c + d);
+        }
+
+        console.log(addAndMultiply(2, 3, 4, 5));
+
+        // 6.
+        console.log('----------------Return larger----------------');
+
+        function checkLarger(a, b) {
+            if (a < b) {
+                return b;
+            }
+
+            return a;
+        }
+
+        console.log(checkLarger(44, 33));
+
+        // 7.
+        console.log('----------------Sum of elements----------------');
+
+        function addArrNums(arr) {
+            let total = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                total += arr[i];
+            }
+
+            return total;
+        }
+
+        console.log(addArrNums([4, 5, 6, 7, 8, 9]));
+
+        // 8.
+        console.log('----------------Squaring a number----------------');
+
+        function squareOfNum(num) {
+            // return num * num;
+            return Math.pow(num, 2);
+        }
+
+        console.log(squareOfNum(5));
+
+        // 9.
+        console.log('----------------Odd or Even----------------');
+
+        function evenOrOdd(num) {
+            if (num % 2 == 0) {
+                return 'The number is Even';
+            }
+
+            return 'The number is Odd';
+        }
+
+        console.log(evenOrOdd(7));
+
+        // 10.
+        console.log('----------------Sum of positive----------------');
+
+        function positiveNum(arr) {
+            const posArr = arr.filter((num) => num > -1);
+            let total = 0;
+
+            for (let i = 0; i < posArr.length; i++) {
+                total += posArr[i];
+            }
+
+            return total;
+        }
+
+        console.log(positiveNum([1, -2, 3, -4, 5, -6, 7, -8, 9, -10]));
+        console.log(positiveNum([-2, -5, -6, -2, -2]));
+    </script>
+
+    <title>Functions</title>
+</head>
+
+<body></body>
+
+</html>
